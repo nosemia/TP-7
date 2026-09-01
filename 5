@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class Estudiante {
+private:
+    string nombre;
+    int edad;
+    float calificacion;
+
+public:
+    void setNombre(string);
+    void setEdad(int);
+    void setCalificacion(float);
+
+    string getNombre();
+    int getEdad();
+    float getCalificacion();
+};
+
+void Estudiante::setNombre(string n) {
+    nombre = n;
+}
+
+void Estudiante::setEdad(int e) {
+    edad = e;
+}
+
+void Estudiante::setCalificacion(float c) {
+    calificacion = c;
+}
+
+string Estudiante::getNombre() {
+    return nombre;
+}
+
+int Estudiante::getEdad() {
+    return edad;
+}
+
+float Estudiante::getCalificacion() {
+    return calificacion;
+}
+
+int main() {
+    Estudiante e;
+
+    e.setNombre("Agostina");
+    e.setEdad(17);
+    e.setCalificacion(9);
+
+    cout << e.getNombre() << endl;
+    cout << e.getEdad() << endl;
+    cout << e.getCalificacion() << endl;
+
+    return 0;
+}
